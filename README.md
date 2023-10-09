@@ -9,7 +9,7 @@
 
 ## Gatsby + Drupal 🔥
 
-1.  **Front-end built on Gatsby 4.x**
+1.  **Front-end built on Gatsby 5.x**
 
     I use Gatsby to generate all the static files. I built page templates, components and theme with React.
 
