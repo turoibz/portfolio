@@ -21,7 +21,7 @@ export function Footer(){
             <LinkedInButton/>
             <Spacer/>
             <StyleFooterNote>
-              <Paragraph size="xxs">Designed in Figma, built with React — Arturo Ibanez 2023. All Rights Reserved.</Paragraph>
+              <Paragraph size="xxs">Designed with ❤️ in Figma and built with <a href="https://github.com/turoibz/portfolio" target="_blank">Gatsby and Drupal</a> — Arturo Ibanez 2023. All Rights Reserved.</Paragraph>
               <StyledBrandContainer>
                 <GlassesOpen color={"black"}/>
               </StyledBrandContainer>
