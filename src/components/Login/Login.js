@@ -7,7 +7,6 @@ import { StyledLogin, StyledLabel, StyledInput, StyledSubmit, StyledNote, Styled
 
 
 function Login({...props}){
-  console.log(process.env.GATSBY_LOGIN_API);
   const userNameRef = useRef();
   const passwordRef = useRef();
   const [loginMsg, setLoginMsg] = React.useState(false);

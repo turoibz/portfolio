@@ -14,7 +14,7 @@ import { CalendarIcon, ClockIcon } from "../../foundation/Icon";
 import parse from 'html-react-parser';
 
 function ProjectProtected({protectedContent, nextProject, previousProject}){
-  const api = "https://api.arturoibanez.com/jsonapi/node/project_protected/";
+  const api = process.env.DRUPAL_PROJECT_PROTECTED;
   const projectID = protectedContent.drupal_id;
   const project = axios.create({
     baseURL: api+projectID,

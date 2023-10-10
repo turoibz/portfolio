@@ -32,18 +32,22 @@ const StyledGlobalStyle = createGlobalStyle`
 		margin: 0 0 2.5rem 0;
 		font-size: '3rem';
     line-height: '2.73rem';
+		scroll-margin-top: 5rem;
 	}
 	h2{
 		margin: 0 0 2rem 0;
 		font-weight: ${({ theme }) => theme.font.weight.regular};
 		font-size: ${({ theme }) => theme.font.size.xlg};
 		font-family: ${({ theme }) => theme.font.family.manrope};
+		scroll-margin-top: 5rem;
 	}
 	h3{
 		margin: 0 0 1.5rem 0;
 		font-family: ${({ theme }) => theme.font.family.manrope};
 		font-weight: ${({ theme }) => theme.font.weight.regular};
 		font-size: ${({ theme }) => theme.font.size.lg};
+		scroll-margin-top: 5rem;
+
 	}
 	h4{
 		margin: 0 0 1rem 0;
