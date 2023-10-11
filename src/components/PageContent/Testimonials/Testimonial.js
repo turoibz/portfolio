@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { QuoteIcon } from "../../../foundation/Icon";
 import { StyledTestimonial, StyledQuote, StyledCopy, StyledAuthor } from "./Testimonial.styled"
 

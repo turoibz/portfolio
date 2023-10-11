@@ -1,10 +1,9 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import { H1, Paragraph } from "./../../../foundation/Typography";
 import { Spacer } from "./../../../foundation/Spacer/Spacer";
 import { StyledAboutImage } from "./About.styled";
-
-import about from "./../../../images/about.png";
 
 export function About(){
   return(
@@ -26,7 +25,7 @@ export function About(){
           </Col>
           <Col col={12} md={4} sm={12}>
             <StyledAboutImage>
-              <img src={about} alt=""/>
+              <StaticImage src="./../../../images/about.png" alt="About me decorative image" placeholder="blurred"/> 
             </StyledAboutImage>
           </Col>
         </Row>

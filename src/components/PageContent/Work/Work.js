@@ -1,11 +1,10 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import { H1, Paragraph } from "./../../../foundation/Typography";
 import ProjectList from "./../../ProjectList/ProjectList";
 import { Spacer } from "./../../../foundation/Spacer/Spacer";
 import { StyledWorkImage } from "./Work.styled"
-
-import work from "./../../../images/work.png"
 
 export function Work(){
   return(
@@ -20,7 +19,7 @@ export function Work(){
           </Col>
           <Col col={12} md={4} sm={12}>
             <StyledWorkImage>
-              <img src={work}/>
+              <StaticImage src="./../../../images/work.png" alt="Work decorative image" placeholder="blurred"/> 
             </StyledWorkImage>
           </Col>
         </Row>

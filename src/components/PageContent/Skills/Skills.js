@@ -1,11 +1,9 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import { H1, Paragraph } from "./../../../foundation/Typography";
 import { Spacer } from "./../../../foundation/Spacer/Spacer";
 import { StyledSkills, StyledListSkills, StyledListItemSkills, StyledSkillsImage } from "./Skills.styled";
-
-import skills from "./../../../images/skills.png"
-
 
 export function Skills(){
   return(
@@ -29,7 +27,7 @@ export function Skills(){
           </Col>
           <Col col={12} sm={12} md={4} mdOffset={0}>
             <StyledSkillsImage>
-              <img src={skills} alt=""/>
+              <StaticImage src="./../../../images/skills.png" alt="About me decorative image" placeholder="blurred"/> 
             </StyledSkillsImage>
           </Col>
         </Row>

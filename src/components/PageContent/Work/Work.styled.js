@@ -10,5 +10,6 @@ export const StyledWorkImage = styled.div`
     width: 100%;
     display: block;
     margin-bottom: 3rem;
+    height: auto;
   }
 `;

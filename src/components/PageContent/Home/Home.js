@@ -1,12 +1,11 @@
 import React from "react";
+import { StaticImage } from "gatsby-plugin-image"
 import { Container, Row, Col } from "styled-bootstrap-grid";
 import { H1, H2, Paragraph} from "./../../../foundation/Typography";
 import { StyledHero, StyledHome, StyledTitle, StyledTagLine, StyledHomeImage } from "./Home.styled";
 import ProjectList from "./../../ProjectList/ProjectList";
 import { Skills } from "./../Skills/Skills";
 import { Testimonials } from "./../Testimonials/Testimonials"
-
-import home from "./../../../images/home.png"
 
 export function Home(){
   return(
@@ -27,7 +26,7 @@ export function Home(){
             </Col>
             <Col col={12} sm={12} md={12} lg={8} mdOffset={0} noGutter>
               <StyledHomeImage>
-                <img src={home} alt=""/>
+                <StaticImage src="./../../../images/home.png" alt="Hero homepage" placeholder="blurred"/>
               </StyledHomeImage>
             </Col>
           </Row>
