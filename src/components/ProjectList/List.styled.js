@@ -47,6 +47,7 @@ export const StyledList = styled.ul`
   margin: 0;
   padding: 0;
   padding: 8px 0 20px 0;
+  max-width: 100%;
   ${layout};
   -ms-overflow-style: none;
   scrollbar-width: none;

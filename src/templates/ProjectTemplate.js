@@ -8,9 +8,6 @@ import ProjectProtected from "./../components/Project/ProjectProtected";
 export const query = graphql`
   query Project($projectId: String!) {
     nodeProject(id: {eq: $projectId}) {
-      body {
-        processed
-      }
       title
       field_heading
       field_tag_line
@@ -47,6 +44,44 @@ export const query = graphql`
             }
           }
         }
+        field_project_summary_section {
+          field_project_company
+          field_project_deliverables
+          field_project_design
+          field_project_team
+          field_project_tech
+        }
+        field_project_section {
+          field_project_section_type
+          field_project_section_background
+          field_project_section_right_colu
+          field_project_section_left_colum
+          field_project_section_btm_space
+          field_project_section_top_space
+          field_project_section_copy {
+            processed
+          }
+          relationships {
+            field_project_section_media {
+              field_media_image {
+                alt
+              }
+              relationships {
+                field_media_image {
+                  localFile {
+                    publicURL
+                    ext
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -61,11 +96,12 @@ const ProjectTemplate = ({location, data}) => {
     projectType: data.nodeProject.field_is_about,
     projectDate: data.nodeProject.field_project_date,
     projectTimeframe: data.nodeProject.field_project_timeframe,
-    body: data.nodeProject.body.processed,
+    // body: data.nodeProject.body.processed,
+    projectSummary: data.nodeProject.relationships.field_project_summary_section,
+    projectSections: data.nodeProject.relationships.field_project_section,
     protectedContent: data.nodeProject.relationships.field_protected,
     nextProject: data.nodeProject.relationships.field_next_project,
     previousProject: data.nodeProject.relationships.field_previous_project,
-    summaryProject: data.nodeProject.field_project_summary.processed
   }
   return(
     <>

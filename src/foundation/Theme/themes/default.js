@@ -35,7 +35,7 @@ const Default =  {
 			padding: 0
 		},
 		col:{
-			padding: 10
+			padding: 20
 		},
 		container: {
 			padding: 0,

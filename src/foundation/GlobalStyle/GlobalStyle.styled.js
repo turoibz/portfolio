@@ -65,13 +65,10 @@ const StyledGlobalStyle = createGlobalStyle`
 		font-size: ${({ theme }) => theme.font.size.xs};
 		font-family: ${({ theme }) => theme.font.family.manrope};
 		font-weight: ${({ theme }) => theme.font.weight.regular};
-		max-width: 40em;
+		max-width: 42em;
 		margin: 0 0 2rem 0;
 		outline: transparent;
 		line-height: 1.8rem;
-		&:last-child{
-			margin: 0;
-		}
 	}
 	p.isCaption{
 		font-size: ${({ theme }) => theme.font.size.xxs};
@@ -87,9 +84,11 @@ const StyledGlobalStyle = createGlobalStyle`
 	}
 	p.md{
 		font-size: ${({ theme }) => theme.font.size.md};
+		line-height: 2.25rem;
 	}
 	p.lg{
 		font-size: ${({ theme }) => theme.font.size.lg};
+		line-height: 2.5rem;
 	}
 	p.xlg{
 		font-size: ${({ theme }) => theme.font.size.xlg};
@@ -97,6 +96,24 @@ const StyledGlobalStyle = createGlobalStyle`
 	p.xxlg{
 		font-size: ${({ theme }) => theme.font.size.xxlg};
 	}
+	ul{
+		max-width: 42em;
+	}
+	.article-image {
+		margin: 0 0 2rem 0;
+		img{
+			border: 1px solid #c7c7c7;
+			border-radius: 16px;
+		}
+	}
+	.article-media{
+		margin: 0 0 2rem 0;
+		display: block;
+		width: 100%;
+		border: 1px solid #c7c7c7;
+		border-radius: 16px;
+	}
+
 	[data-rmiz-overlay]{
 		background-color:${({ theme }) => theme.color.lightBlue}f5 !important;
 		background-opacity:.8 !important;
@@ -106,7 +123,6 @@ const StyledGlobalStyle = createGlobalStyle`
         transform: translateX(100%);
     }
 	}
-
 	.react-loading-skeleton {
 			--base-color: ${({ theme }) => theme.color.black};
 			--highlight-color: ${({ theme }) => theme.color.lightBlue};
@@ -149,6 +165,142 @@ const StyledGlobalStyle = createGlobalStyle`
 			animation-duration: var(--animation-duration);
 			animation-timing-function: ease-in-out;
 			animation-iteration-count: infinite;
+	}
+	/* Slider */
+	.slick-slider
+	{
+			position: relative;
+			margin-bottom: 2rem;
+			display: block;
+			box-sizing: border-box;
+
+			-webkit-user-select: none;
+				-moz-user-select: none;
+					-ms-user-select: none;
+							user-select: none;
+
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+					touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+	}
+	.slick-list
+	{
+			position: relative;
+			cursor: grab;
+			display: block;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+	}
+	.slick-list:focus
+	{
+			outline: none;
+	}
+	.slick-list.dragging
+	{
+			cursor: pointer;
+			cursor: hand;
+	}
+
+	.slick-slider .slick-track,
+	.slick-slider .slick-list
+	{
+			-webkit-transform: translate3d(0, 0, 0);
+				-moz-transform: translate3d(0, 0, 0);
+					-ms-transform: translate3d(0, 0, 0);
+					-o-transform: translate3d(0, 0, 0);
+							transform: translate3d(0, 0, 0);
+	}
+
+	.slick-track
+	{
+			position: relative;
+			top: 0;
+			left: 0;
+
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+	}
+	.slick-track:before,
+	.slick-track:after
+	{
+			display: table;
+
+			content: '';
+	}
+	.slick-track:after
+	{
+			clear: both;
+	}
+	.slick-loading .slick-track
+	{
+			visibility: hidden;
+	}
+
+	.slick-slide
+	{
+			display: none;
+			float: left;
+
+			height: 100%;
+			min-height: 1px;
+	}
+	[dir='rtl'] .slick-slide
+	{
+			float: right;
+	}
+	.slick-slide img
+	{
+			display: block;
+			border: 1px solid #c7c7c7;
+    	border-radius: 16px;
+	}
+	.slick-slide.slick-loading img
+	{
+			display: none;
+	}
+	.slick-slide.dragging img
+	{
+			pointer-events: none;
+	}
+	.slick-initialized .slick-slide
+	{
+			display: block;
+	}
+	.slick-loading .slick-slide
+	{
+			visibility: hidden;
+	}
+	.slick-vertical .slick-slide
+	{
+			display: block;
+
+			height: auto;
+
+			border: 1px solid transparent;
+	}
+	.slick-arrow.slick-hidden {
+			display: none;
+	}
+	.slick-dots{
+		padding: 0;
+    display: flex!important;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+		li{
+			list-style-type:none;
+			&.slick-active div{
+				width: 32px;
+				border-radius: 15px;
+				opacity: 1;
+				transition: opacity 500ms ease-in-out, width 250ms ease-in-out;
+			}
+		}
 	}
 `;
 

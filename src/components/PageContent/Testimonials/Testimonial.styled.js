@@ -40,4 +40,5 @@ export const StyledAuthor = styled.p`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin-bottom:0;
 `;

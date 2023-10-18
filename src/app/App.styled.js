@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const StyledContentWrapper = styled.section`
+export const StyledContentWrapper = styled.div`
 	padding: 2rem 0 0 0;
 	flex: 1 auto;
 	display: flex;
