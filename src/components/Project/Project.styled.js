@@ -17,6 +17,7 @@ export const StyledFigure = styled.figure`
 export const StyledFigureCaption = styled.figcaption`
   margin: -1rem 1.5rem 2rem;
   font-size: 0.9rem;
+  line-height:1.35rem;
   color: #777;
 `;
 export const StyledFigureCarouselCaption = styled.figcaption`
@@ -144,6 +145,7 @@ export const StyledArticle = styled.article`
       margin-left: 1.5rem;
       margin-right: 1.5rem;
       font-size: .90rem;
+      line-height: 1.35;
       color: #777777;
     }
   }

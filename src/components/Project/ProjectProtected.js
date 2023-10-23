@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "gatsby-image";
 import axios from "axios";
+import parse from 'html-react-parser';
 import Skeleton from 'react-loading-skeleton';
 import { ProjectSummary } from "./ProjectSummary";
 import { NavigateProjects } from "./../Navigation/NavigateProjects"
@@ -12,8 +12,7 @@ import { StyledProtectedHero, StyledHero, StyledHeroHeading, StyledHeroImage, St
 import { H1, Paragraph } from "./../../foundation/Typography";
 import { CalendarIcon, ClockIcon } from "../../foundation/Icon";
 
-import parse from 'html-react-parser';
-
+import "./grid.css";
 import emptyHero from "./../../images/hero_empty.png"; 
 
 function ProjectProtected({protectedContent, nextProject, previousProject}){
@@ -103,26 +102,22 @@ function ProjectProtected({protectedContent, nextProject, previousProject}){
       {isLoggedIn &&
         <ProjectSummary projectSummary={summary}/>
       }
-      <Container>
-        <Row>
-          <Col col={12} sm={12} md={12} lg={10} mdOffset={0}>
-            {isLoggedIn &&
-              <>
-                <StyledArticle>
-                  {parse(content.field_protected_content.processed)}
-                </StyledArticle>
-              </>
-            }
-          </Col>
-        </Row>
-        { !isLoggedIn && !isLoading &&
+      {isLoggedIn &&
+        <>
+          <StyledArticle>
+            {parse(content.field_protected_content.processed)}
+          </StyledArticle>
+        </>
+      }
+      { !isLoggedIn && !isLoading &&
+        <Container>
           <Row>
             <Login/>
             <PublicProjectsList/>
           </Row>
-        }
-        <Spacer/>
-      </Container>
+          <Spacer/>
+        </Container>
+      }
       {isLoggedIn &&
         <NavigateProjects nextProject={nextProject} previousProject={previousProject}/>
       }

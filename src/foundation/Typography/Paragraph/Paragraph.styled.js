@@ -10,7 +10,6 @@ export const StyledParagraph = styled.p`
 	max-width: 40em;
 	margin: 0 0 2rem 0;
 	outline: transparent;
-	line-height: 1.8rem;
 	&:last-child{
 		margin: 0;
 	}
@@ -30,5 +29,6 @@ function border({theme, isCaption}){
 function size({size}){
   return css`
     font-size: ${({ theme }) => theme.font.size[size]};
+    line-height: ${({ theme }) => theme.font.lineheight[size]};
   `;
 }

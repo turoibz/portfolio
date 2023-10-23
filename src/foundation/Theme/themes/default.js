@@ -28,6 +28,15 @@ const Default =  {
 			lg: rem('24px'),
 			xlg: rem('32px'),
 			xxlg: rem('40px'),
+		},
+		lineheight:{
+			xxs: rem('21px'),
+			xs: rem('25px'),
+			sm: rem('27px'),
+			md: rem('30px'),
+			lg: rem('36px'),
+			xlg: rem('48px'),
+			xxlg: rem('60px'),
 		}
 	},
 	grid:{
