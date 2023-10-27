@@ -9,8 +9,9 @@ const Default =  {
 		offgrey: "#fafbfb",
 		peach: "#fdc9be",
 		slateGray: "#70798c",
+		gray: "#d3d3d3",
 		sand: "#ffeee4",
-		skyblue: "#24C4F5"
+		skyblue: "#24C4F5",
 	},
 	font:{
 		family:{

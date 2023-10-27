@@ -96,7 +96,8 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledSummaryCard = styled.div`
-  background: #FFF;
+  background: ${({ theme }) => theme.color.offgrey};
+  border: 1px solid ${({ theme }) => theme.color.gray};
   border-radius: .75rem;
   display: flex;
   flex-direction: column;

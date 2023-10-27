@@ -9,7 +9,7 @@ export function Skills(){
   return(
     <StyledSkills>
       <Container>
-        <Row>
+        <Row mdAlignItems={"end"}>
           <Col col={12} sm={12} md={8} mdOffset={0}>
             <H1 isVariant>Skills</H1>
             <StyledListSkills>
